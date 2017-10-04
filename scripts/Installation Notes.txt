@@ -1,0 +1,5 @@
+in sudo config : 
+nginx ALL = NOPASSWD: /sbin/service nginx restart
+nginx ALL = NOPASSWD: /sbin/service mysqld restart
+nginx ALL = NOPASSWD: /sbin/service network restart
+nginx ALL = NOPASSWD: /sbin/service iptables restart

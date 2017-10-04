@@ -1,0 +1,150 @@
+@import 'style_default.css';
+.server {
+  padding: 30px 25px;
+  background-color: #317eeb;
+  border: 1px solid #317eeb;
+  color: #FFF;
+  border-radius: 2px;
+}
+.server .main {
+  display: inline-block;
+  width: 25%;
+}
+.server .main .ip {
+  font-size: 20px;
+}
+.server .boxes {
+  display: inline-block;
+  width: 45%;
+}
+.server .boxes .box {
+  width: 120px;
+  display: inline-block;
+}
+.server .boxes .box .value {
+  font-size: 30px;
+}
+.server .boxes .box .value.uptime {
+  font-size: 14px;
+  border-left: 2px solid #498bdf;
+  padding-left: 15px;
+}
+.server .boxes .box .value.uptime span {
+  display: block;
+}
+.server .boxes .box .value.uptime span b {
+  float: right;
+  display: inline-block;
+}
+.server .charts {
+  margin-top: -5px;
+  display: inline-block;
+  width: 27%;
+  float: right;
+}
+.server .charts .radial-bar {
+  border: 2px solid #5895d9;
+  font-size: 14px;
+}
+.server .charts .radial-bar span {
+  display: none;
+}
+.server .charts .radial-bar:hover span {
+  display: block;
+  position: absolute;
+  left: -10%;
+  top: 60px;
+  z-index: 999;
+  font-size: 9px;
+  color: #efe350;
+  background-color: #2966bd;
+  padding: 5px;
+  width: 120%;
+  text-align: center;
+  border: 2px solid #5392da;
+}
+.server .charts .radial-bar:not(:first-child) {
+  margin-left: 20px;
+}
+.server .charts .radial-bar:after {
+  background-color: #2966bd;
+  color: #FFF;
+}
+.server .refresh {
+  position: absolute;
+  right: -30px;
+  font-size: 10px;
+  margin-top: -40px;
+  transform: rotate(90deg);
+  text-align: center;
+  width: 130px;
+}
+.server + .server {
+  margin-top: 20px;
+}
+.btn-control {
+  margin: 10px 0.5%;
+  width: 23%;
+  display: inline-block;
+  height: 80px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  padding: 15px;
+  color: #444444;
+}
+.btn-control .icon {
+  display: block;
+  margin-bottom: 6px;
+}
+.btn-control .icon .fa {
+  font-size: 22px;
+}
+.topbar-left {
+  padding-left: 30px;
+}
+table.dataTable thead th {
+  background-color: #d6d6d6;
+  border-bottom: 1px solid #b9b9b9 !important;
+  color: #666;
+}
+table.dataTable tbody tr {
+  background-color: #eaeaea !important;
+}
+table.dataTable tbody tr td {
+  border: 1px solid #e4e4e4 !important;
+}
+.panel .about-info-p {
+  margin: 10px;
+}
+.panel h5 {
+  margin-left: 10px;
+}
+.table .progress {
+  height: 20px;
+  margin-bottom: unset;
+}
+.table .progress .progress-bar {
+  color: #5b5c5f;
+  line-height: 20px;
+}
+.vm-status {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+}
+.vm-status.on {
+  background-color: #2d7854;
+}
+.vm-status.off {
+  background-color: #9c9c9c;
+}
+.vm-status.suspended {
+  background-color: #c7344a;
+}
+.actionbar:empty {
+  display: none;
+}
+.actionbar {
+  margin-bottom: 15px;
+  text-align: right;
+}

@@ -1,0 +1,35 @@
+server {
+	listen 2026;
+    ssl    on;
+    ssl_certificate  /usr/ssl/mspvm.crt;
+    ssl_certificate_key  /usr/ssl/mspvm.key;
+	server_name    www.mspvm.com;
+	error_log /var/mspvm/data/nginx.error.log;
+	
+	error_page 497 https://$host:$server_port$request_uri;
+	
+	root /var/mspvm/mspvm;
+	index index.php;
+	
+	location ~ \.php$ {
+		include /etc/nginx/fastcgi_params;
+		fastcgi_pass  127.0.0.1:9000;
+		fastcgi_index index.php;
+		fastcgi_param SCRIPT_FILENAME /var/mspvm/mspvm$fastcgi_script_name;
+	}
+}
+
+server {
+    listen 80 default_server;
+		
+    root /var/mspvm/default;
+    index index.html index.htm;
+    server_name localhost;
+
+	location ~ \.php$ {
+		include /etc/nginx/fastcgi_params;
+		fastcgi_pass  127.0.0.1:9000;
+		fastcgi_index index.php;
+		fastcgi_param SCRIPT_FILENAME /var/mspvm/mspvm$fastcgi_script_name;
+	}
+}

@@ -1,0 +1,5 @@
+#!/bin/sh
+VPS="$(cd /vz/private/ && echo *)"
+for VPS in $VPS; do
+/usr/sbin/vzctl  compact $VPS
+done; 

@@ -1,0 +1,6 @@
+[soluslabs]
+name=Soluslab Repo
+#baseurl=http://repo.soluslabs.com/centos/$releasever/os/$basearch
+mirrorlist=http://repo.soluslabs.com/centos/mirrors-soluslabs
+gpgcheck=0
+enabled=1
